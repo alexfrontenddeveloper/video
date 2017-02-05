@@ -1,0 +1,219 @@
+@font-face 
+{
+    font-family: zag;
+    src: url(../fonts/HARLOWSI.TTF); 
+}
+@font-face 
+{
+    font-family: conten;
+    src: url(../fonts/comicbd.ttf); 
+}
+body
+{
+    margin: 0;
+    padding: 0;
+}
+.wraper svg, img
+{
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+.wraper svg
+{
+        height: auto;
+}
+.wraper hr
+{
+    background-color: #e45126;
+    height: 3px;
+    width: 120px;
+    border-color: #e45126;
+}
+h1
+{
+    margin: 0;
+    font-size: 38pt;
+    text-align: center;
+    font-family: zag;
+}
+p
+{
+    font-family: conten;
+    padding: 10px;
+    text-indent: 1.5em;
+    text-align: justify;
+}
+.head
+{
+    z-index: 1;
+    width: 100%;
+    background: rgba(0, 0, 0, 1);
+}
+.logo svg
+{
+    margin: 5px;
+    padding: 0;
+    width: 100px;
+    height: 60px
+}
+.phone
+{
+    display: block;
+    text-decoration: none;
+    font-family: zag;
+    color: #fff;
+    font-size: 20px;
+}
+.phone:hover
+{
+    color: #e45126;
+}
+nav
+{
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 100px;
+}
+.phone_bloc
+{
+    margin: 10px 20px 0 0px;
+    float: right;
+}
+a.punckt 
+{
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    padding: 10px;
+    margin: 0 2%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-family: conten; 
+}
+
+a.punckt:hover 
+{
+    color: #000;
+    background-color: #f1682b;
+    text-decoration: none; 
+    border-color: #f1682b;        
+}
+.homepage             
+{
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+.no-video .video-container video, .touch .video-container video 
+{
+    display: none;
+}
+.no-video .video-container .poster, .touch .video-container .poster 
+{
+    display: block !important;
+}
+.video-container 
+{
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%; 
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img 
+{
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter 
+{
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video 
+{
+    position: absolute;
+    z-index: 0;
+}
+.video-container video.fillWidth 
+{
+    width: 100%;
+}
+.wraper
+{
+    padding: 110px 0 0 0;
+}
+#top
+{
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    color: #e45126;
+    font-size: 30pt;
+}
+#top:hover
+{
+    color: #1673b6;
+    cursor: pointer;
+}
+#top:active
+{
+    color: #e4a227;
+    cursor: pointer;
+}
+@media(max-width: 1200px) and (min-width: 1100px)
+{
+    .video-container video
+    {
+        height: 100%;
+    }
+}
+@media (max-width: 995px) 
+{
+    nav 
+    {
+        top: 75px;
+        width: 100%;  
+        z-index: 101;
+    }
+    a.punckt 
+    {
+        display: block;
+        padding: 5px 0 5px 0 !important;
+        margin: auto !important;
+        border-color: transparent;
+    }
+    nav:before, nav div:before 
+    {
+        margin: -18px;
+        height: 35px;
+        width: 35px;
+        border-radius: 10px; 
+    }
+    nav:before 
+    {
+        content: url(../img/sm.png);
+    }
+    nav:focus:before 
+    {
+        content: none; 
+    }
+    nav:focus div:before 
+    {
+        height: 50px;
+        width: 50px;
+        content: url(../img/sm2.png);
+    }
+    nav:not(:focus) div:not(:active) 
+    {
+        display: none; 
+    } 
+}
